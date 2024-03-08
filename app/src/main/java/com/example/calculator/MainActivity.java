@@ -18,7 +18,7 @@ public class MainActivity extends AppCompatActivity {
 
     private int[] tombolNumeric = {R.id.nol, R.id.satu, R.id.dua, R.id.tiga, R.id.empat, R.id.lima, R.id.enam, R.id.tuju, R.id.delapan, R.id.sembilan};
 
-    private int[] tombolOperator = {R.id.bagi, R.id.kali, R.id.tambah, R.id.kurang, R.id.titik};
+    private int[] tombolOperator = {R.id.bagi, R.id.kali, R.id.tambah, R.id.kurang, R.id.titik, R.id.backspace};
 
 
     private TextView workings;
@@ -132,6 +132,20 @@ public class MainActivity extends AppCompatActivity {
                 angkaTerakhir = false;
                 kaloError = false;
                 setelahTitik = false;
+            }
+        });
+
+        // Fungsionalitas Tombol Backspace "Backspace"
+        findViewById(R.id.backspace).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String str = workings.getText().toString();
+                if (str.length() > 1) {
+                    str = str.substring(0, str.length() - 1);
+                    workings.setText(str);
+                } else if (str.length() <= 1) {
+                    workings.setText("0");
+                }
             }
         });
 
