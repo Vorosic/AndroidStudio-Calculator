@@ -1,6 +1,10 @@
 <h1 align="center">Android Studio Calculator</h1>
 <h3 align="center">A simple calculator for a school project of mine, Might keep updating in the future</h3>
 
+## Changes 1 3/8/2024
+- Added Splash Screen
+- Added app icon
+
 ## Feature as of 3/7/2024
 - Multiply (*)
 - Divide (/)
